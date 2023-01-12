@@ -124,4 +124,4 @@ for (let i = 0; i < changes.length; i++) {
 // total change devided by length of money array -1 because array start at zero not 1
 avgChange = totalChange/(finances.length - 1);
 
-console.log(`Average change is equal to ${avgChange}`)
+console.log(`Average change is equal to ${avgChange}`);
