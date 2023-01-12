@@ -101,5 +101,27 @@ for (let i = 0; i < finances.length; i++) {
 }
 console.log(`${netTotal} is net total` );
 
+// track avg change profit & loss
 
+// container for changes
+let changes = [];
 
+// start change off with 0
+let totalChange = 0;
+
+// iterate through money array again to calculate avg change
+for (let i = 1; i < finances.length; i++) {
+    // target second param in the money array. store in change variable
+    let change = finances[i][1] - finances[i - 1][1];
+    changes.push(change);
+}
+
+// iterates through changes array and add value to changes index
+for (let i = 0; i < changes.length; i++) {
+    totalChange += changes[i];
+}
+
+// total change devided by length of money array -1 because array start at zero not 1
+avgChange = totalChange/(finances.length - 1);
+
+console.log(`Average change is equal to ${avgChange}`)
