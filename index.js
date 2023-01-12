@@ -123,18 +123,12 @@ for (let i = 0; i < changes.length; i++) {
 
 // total change devided by length of money array -1 because array start at zero not 1
 avgChange = totalChange / (finances.length - 1);
-
 console.log(`Average change is equal to ${avgChange}`);
 
 // log highest increase of profit
 let highestProfit = changes.reduce((acc, value) => Math.max(acc, value));
-
-
-
 console.log(`greatest increase ${highestProfit}`);
 
 // calculate greatestDecrease 
 let greatestDecrease = changes.reduce((acc, value) => Math.min(acc, value));
-
-
 console.log(`Greatest Decrease ${greatestDecrease}`)
