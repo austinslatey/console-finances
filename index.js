@@ -87,5 +87,19 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+// write total months from money array 
+var totalMonths = finances.length
+console.log(totalMonths);
+
+// net total losses over entire period
+
+var netTotal = 0;
+
+// loop through second param of money array 
+for (let i = 0; i < finances.length; i++) {
+    netTotal = netTotal + finances[i][1];
+}
+console.log(`${netTotal} is net total` );
+
 
 
