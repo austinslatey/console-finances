@@ -89,10 +89,9 @@ var finances = [
 
 // write total months from money array 
 var totalMonths = finances.length
-console.log(totalMonths);
+console.log(`Total Months: ${totalMonths}`);
 
 // net total losses over entire period
-
 var netTotal = 0;
 
 // loop through second param of money array 
@@ -101,9 +100,8 @@ for (let i = 0; i < finances.length; i++) {
 }
 console.log(`${netTotal} is net total`);
 
-// track avg change profit & loss
-
-// container for changes
+/*  track avg change profit & loss
+start with container for changes */
 let changes = [];
 
 // start change off with 0
@@ -123,12 +121,12 @@ for (let i = 0; i < changes.length; i++) {
 
 // total change devided by length of money array -1 because array start at zero not 1
 avgChange = totalChange / (finances.length - 1);
-console.log(`Average change is equal to ${avgChange}`);
+console.log(`Average change: ${avgChange}`);
 
 // log highest increase of profit
 let highestProfit = changes.reduce((acc, value) => Math.max(acc, value));
-console.log(`greatest increase ${highestProfit}`);
+console.log(`Greatest increase: ${highestProfit}`);
 
 // calculate greatestDecrease 
 let greatestDecrease = changes.reduce((acc, value) => Math.min(acc, value));
-console.log(`Greatest Decrease ${greatestDecrease}`)
+console.log(`Greatest decrease: ${greatestDecrease}`)
